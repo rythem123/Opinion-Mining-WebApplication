@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Sentiment Analysis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            color: white;
+            margin: 10px auto;
+            padding: 0px;
+            background: url('https://www.insiktintelligence.com/wp-content/uploads/2019/07/social-media-sentiment-analysis-e1563381603995.png')no-repeat center center/cover;
+            height: 500px;
+            width: auto;
+            font-family: 'Playball', cursive;
+
+        }
+
+        .left {
+            display: inline-block;
+            /* border: 2px solid red; */
+            /* padding: 10px;
+          margin: 10px; */
+            color: white;
+            position: absolute;
+            left: 30px;
+            top: 20px;
+
+
+        }
+
+        .left img {
+            width: 98px;
+            border-radius: 20px;
+        }
+
+        .mid {
+            display: block;
+            width: 46%;
+            margin: 16px auto;
+            /* border: 2px solid black; */
+            padding: 10px;
+            color: rgb(122, 39, 39);
+
+
+        }
+
+        .right {
+            position: absolute;
+            right: -8px;
+            top: 20px;
+            display: inline-block;
+            /* border: 2px solid rgb(67, 28, 175); */
+            padding: 10px;
+            margin: 10px;
+
+
+
+        }
+
+        .navbar li {
+            display: inline-block;
+            font-size: 20px;
+        }
+
+        .navbar li a {
+
+            color: #ffffff;
+            text-decoration: none;
+            padding: 20px;
+            text-align: center;
+
+        }
+
+        .navbar li a:hover {
+            text-decoration: underline;
+            color: rgb(67, 28, 175);
+
+
+        }
+
+        .btn {
+            /* border:2px solid red; */
+            margin: 0px 20px;
+            padding: 4px 14px;
+            color: white;
+            background-color: black;
+            border-radius: 10px;
+            border: 2px solid gray;
+            font-size: 12px;
+            cursor: pointer;
+            font-family: 'Playball', cursive;
+
+
+        }
+
+        .btn:hover {
+            color: greenyellow;
+
+        }
+
+        .container h1 {
+            color: rgb(59, 4, 57);
+        }
+
+        .container {
+            /* border: 2px solid black; */
+            margin: 13px auto;
+            padding: 15px auto;
+            display: block;
+            width: 37%;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .form-group input {
+            font-family: 'Playball', cursive;
+            font-size: 20px;
+            border-radius: 10px;
+            border: 2px solid black;
+            text-align: center;
+            display: inline-block;
+            padding: 1px;
+            width: 278px;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SOCIAL SENTIMENT ANALYSIS</h1>
+        <form method="post" action=".">
+            <div class="form-group">
+                <input type="text" name="Fname" placeholder="Enter Your Name ">
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="Sub" placeholder="Enter the subject ">
+            </div>
+
+            <!-- <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Age ">
+            </div> -->
+
+            <div class="form-group">
+                <input type="text" name="email" placeholder="Enter your Email ">
+            </div>
+            <div class="form-group">
+                <input type="text" name="num" placeholder="Enter your Contact Number ">
+            </div>
+            <input type="submit" value="login">
+        </form>
+    </div>
+    <h1>{{info}}</h1>
+</body>
+</html>
