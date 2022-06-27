@@ -91,7 +91,7 @@ def sentiment(a,b,c):
         msg.add_attachment(file_data,maintype="application",subtype="xlsx",filename=file_name)
 
     with smtplib.SMTP_SSL('smtp.gmail.com',465) as server:
-        server.login('rythemsharma23@gmail.com','Project@1234')
+        server.login('rythemsharma23@gmail.com','add your password')
         server.send_message(msg)
         
 
