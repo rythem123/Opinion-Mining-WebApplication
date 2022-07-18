@@ -105,7 +105,7 @@ def getQuery(q, mail,n):
         pdf.savefig()
         plt.savefig("static/images/graph.png")
     
-    df.to_csv("static\\data\\sentimental_analysis.csv", header=False, index=False)
+    df.to_csv("static/data/sentimental_analysis.csv", header=False, index=False)
     sendMail(mail)
     sub=sub/(int)(n)
     pol=pol/(int)(n)
@@ -142,7 +142,7 @@ def sendMail(mail):
     msg['Subject'] = 'Sentiment Analysis'
     msg['From'] = 'Automation Team'
     msg['To'] = mail
-    with open("static\data\email.txt") as myfile:
+    with open("static/data/email.txt") as myfile:
         data = myfile.read()
         msg.set_content(data)
 
