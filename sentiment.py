@@ -106,7 +106,7 @@ def getQuery(q, mail,n):
         plt.savefig("static/images/graph.png")
     
     df.to_csv("static/data/sentimental_analysis.csv", header=False, index=False)
-    sendMail(mail)
+#     sendMail(mail)
     sub=sub/(int)(n)
     pol=pol/(int)(n)
     return pos,neu,neg,pol,sub
