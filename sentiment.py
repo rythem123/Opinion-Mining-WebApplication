@@ -53,7 +53,7 @@ def getQuery(q, mail,n):
     df['Subjectivity'] = df['Tweets'].apply(getsubjectivity)
     df['Polarity'] = df['Tweets'].apply(getpolarity)
     pos=neu=neg=pol=sub=0
-    with PdfPages("C:/wamp64/www/Social_media_sentiment_analysis/static/data/Sentiments_visualizations.pdf") as pdf:
+    with PdfPages("static/data/Sentiments_visualizations.pdf") as pdf:
         df['Analysis'] = df['Polarity'].apply(getAnalysis)
     # plot the graph between Subjectivity and polarity
         plt.figure(figsize=(8, 8))
@@ -103,9 +103,9 @@ def getQuery(q, mail,n):
     # plt.bar(['pos','neg','neu'],[pos,neg,neu])
         plt.pie([pos, neg, neu], labels=['pos', 'neg', 'neu'], autopct="%1.1f%%")
         pdf.savefig()
-        plt.savefig("C:/wamp64/www/Social_media_sentiment_analysis/static/images/graph.png")
+        plt.savefig("static/images/graph.png")
     
-    df.to_csv("C:\\wamp64\\www\\Social_media_sentiment_analysis\\static\\data\\sentimental_analysis.csv", header=False, index=False)
+    df.to_csv("static\\data\\sentimental_analysis.csv", header=False, index=False)
     sendMail(mail)
     sub=sub/(int)(n)
     pol=pol/(int)(n)
@@ -142,15 +142,15 @@ def sendMail(mail):
     msg['Subject'] = 'Sentiment Analysis'
     msg['From'] = 'Automation Team'
     msg['To'] = mail
-    with open("C:\wamp64\www\Social_media_sentiment_analysis\static\data\email.txt") as myfile:
+    with open("static\data\email.txt") as myfile:
         data = myfile.read()
         msg.set_content(data)
 
-    with open("C:/wamp64/www/Social_media_sentiment_analysis/static/data/sentimental_analysis.csv", "rb") as f:
+    with open("static/data/sentimental_analysis.csv", "rb") as f:
         file_data = f.read()
         file_name = f.name
         msg.add_attachment(file_data, maintype="application", subtype="xlsx", filename=file_name)
-    with open("C:/wamp64/www/Social_media_sentiment_analysis/static/data/Sentiments_visualizations.pdf", "rb") as f:
+    with open("static/data/Sentiments_visualizations.pdf", "rb") as f:
         file_data1 = f.read()
         file_name1 = f.name
         msg.add_attachment(file_data1, maintype="application", subtype="pdf", filename=file_name1)
