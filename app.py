@@ -11,7 +11,7 @@ app.secret_key=os.urandom(24)
 # app.register_blueprint(second)
 
 try:
-    conn = mysql.connector.connect(host="localhost", user="root", password="", database="user")
+    conn = mysql.connector.connect(host="remotemysql.com", user="F6fnXo7NVB", password="Ql6vuRZFLy", database="F6fnXo7NVB")
     cursor=conn.cursor()
 except:
     print("An exception occured")
