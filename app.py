@@ -43,7 +43,7 @@ def login_validation():
     users = cursor.fetchall()
     if len(users)>0:
         session['user_id']=users[0][0]
-        session['user_email'] = users[0][1]
+        email_id= users[0][1]
         return render_template('front.html')
     else:
         return render_template('login.html')
