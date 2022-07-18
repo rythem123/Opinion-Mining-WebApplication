@@ -6,6 +6,7 @@ from requests import Session
 from sentiment import *
 import os
 
+email_id=""
 app=Flask(__name__)
 app.secret_key=os.urandom(24)
 # app.register_blueprint(second)
@@ -60,7 +61,7 @@ def add_user():
     cursor.execute("""SELECT * from `users_table` WHERE `email` LIKE '{}'""".format(email))
     myuser=cursor.fetchall()
     session['user_id']=myuser[0][0]
-    session['user_email'] = myuser[0][1]
+    email_id = myuser[0][1]
     # return render_template('front.html')
     return home()
 
@@ -82,7 +83,7 @@ def logout():
 def logic():
     q = request.form.get('keyword')
     n = request.form.get('tweets')
-    pos,neu,neg,pol,sub=getQuery(q,session['user_email'],n)
+    pos,neu,neg,pol,sub=getQuery(q,email_id,n)
     return render_template('sentiment_analyze.html',polarity=pol,subjectivity=sub,positive=pos,neutral=neu,negative=neg,keyword=q,tweets=n)
 @app.route('/visualize')
 def visualize():
