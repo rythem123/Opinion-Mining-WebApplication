@@ -36,7 +36,7 @@ def home():
 def login_validation():
     email=request.form.get('email')
     password=request.form.get('password')
-    conn = mysql.connector.connect(host="localhost", user="root", password="", database="user")
+    conn = mysql.connector.connect(host="remotemysql.com", user="F6fnXo7NVB", password="Ql6vuRZFLy", database="F6fnXo7NVB")
     cursor=conn.cursor()
     cursor.execute("""SELECT * from `users_table` WHERE `email` LIKE '{}' AND `password` LIKE '{}'""".format(email, password))
     users = cursor.fetchall()
@@ -53,7 +53,7 @@ def add_user():
     name=request.form.get('uname')
     email = request.form.get('uemail')
     password = request.form.get('upassword')
-    conn = mysql.connector.connect(host="localhost", user="root", password="", database="user")
+    conn = mysql.connector.connect(host="remotemysql.com", user="F6fnXo7NVB", password="Ql6vuRZFLy", database="F6fnXo7NVB")
     cursor=conn.cursor()
     cursor.execute("""INSERT INTO `users_table` (`username`,`email`,`password`) VALUES ('{}','{}','{}')""".format(name,email, password))
     conn.commit()
