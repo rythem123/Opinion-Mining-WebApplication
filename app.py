@@ -82,7 +82,7 @@ def logout():
 def logic():
     q = request.form.get('keyword')
     n = request.form.get('tweets')
-    pos,neg,neu,pol,sub=getQuery(q,session['user_email'],n)
+    pos,neu,neg,pol,sub=getQuery(q,session['user_email'],n)
     return render_template('sentiment_analyze.html',polarity=pol,subjectivity=sub,positive=pos,neutral=neu,negative=neg,keyword=q,tweets=n)
 @app.route('/visualize')
 def visualize():
