@@ -7,3 +7,8 @@ Also create your App Passwords to use Gmail account for less secure Apps.You can
 ```
 https://www.youtube.com/watch?v=pAPWBHxnFHM
 ```
+
+![image](images/Screenshot%20(213).png)
+![image](images/Screenshot%20(214).png)
+![image](images/Screenshot%20(215).png)
+![image](images/Screenshot%20(216).png)
