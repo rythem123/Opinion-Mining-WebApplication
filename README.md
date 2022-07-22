@@ -3,4 +3,7 @@ This is a opinion-mining(sentiment analysis) project developed on Python Flask F
 This application will generate a report based on the sentiment analysis and that report will be send to the user email.
 To access this project, clone this repository, run app.py file and open 127.0.0.1:5000 on your browser.
 Don not forget to enter your email and your password in sentiments.py (for sending the generated reports to the users)
-Also create your App Passwords to use Gmail account for less secure Apps.You can refer to this https://www.youtube.com/watch?v=pAPWBHxnFHM
+Also create your App Passwords to use Gmail account for less secure Apps.You can refer to this
+```
+https://www.youtube.com/watch?v=pAPWBHxnFHM
+```
