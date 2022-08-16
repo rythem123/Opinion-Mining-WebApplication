@@ -155,6 +155,6 @@ def sendMail(mail):
         file_name1 = f.name
         msg.add_attachment(file_data1, maintype="application", subtype="pdf", filename=file_name1)
     with smtplib.SMTP_SSL('smtp.gmail.com', 465) as server:
-        server.login('rythemsharma24@gmail.com', 'zbqpinzuulgmyfby')
+        server.login('rythemsharma24@gmail.com', 'password toh apne daal bhai')
         server.send_message(msg)
 #     print("email sent!!!")
